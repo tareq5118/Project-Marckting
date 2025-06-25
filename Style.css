@@ -9,7 +9,8 @@
 --Primary-color:oklch(21% 0.034 264.665);
 --text-color:#afa89d;
 --text-color-p:#b1aaa0;
---size-text:20px;;
+--size-text:20px;
+--color-text-blue:#2A8ffc;
 
 }
 html{
@@ -25,6 +26,9 @@ body{
 }
 .size-text{
     font-size: var(--size-text  );
+}
+.text-color-blue{
+    color: var(--color-text-blue);
 }
 .text-color-p{
     color: var(--text-color-p);
@@ -144,7 +148,7 @@ margin-bottom: 64px;
 .section-cards{
     background-color: #193380;
 width: 100%;
-height: 850px;
+height: auto;
 position: relative;
 transform: skewY(1deg);
 }
@@ -152,7 +156,7 @@ transform: skewY(1deg);
     display: flex;
     gap: 1rem;
     margin: 1.5rem 0px;
-transform: skewY(0deg);
+transform: skewY(-1deg);
 
 } 
 .card{
@@ -162,6 +166,39 @@ transform: skewY(0deg);
     background-color: #1648b2;
     border-radius: 1rem;
 }
+.cards .card svg{
+    color: rgb(126 197 255) ;
+}
 .cards .card p{
     margin: 1rem 0px;
+    color: #ABCFF4;
+}
+/*  */
+.cards-pay{
+    width: 100%;
+    height: 150%;
+    margin: 2rem 0px;
+}
+.card-pay{
+    width: 50%;
+    height: auto;
+    background-color: blueviolet;
+    padding: 25px;
+    
+}
+.card-pay span{
+    font-size: 1.5rem;
+}
+.card-pay-button{
+    width: 100%;
+    background-color: rgb(21, 18, 24);
+    margin: 50px auto;}
+
+.card-pay-button button{
+    font-size: 1rem;
+    padding: 10px 161px;
+    border: 2px solid;
+    border-radius: 5rem;
+    margin: 7px 16px;
+    margin-right: 10px;
 }
