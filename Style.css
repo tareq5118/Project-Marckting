@@ -14,11 +14,12 @@
 
 }
 html{
-    font-family: inter sans-serif;
-    font-size: 16px;
+ font-family: "Inter", sans-serif;
+     font-size: 16px;
 }
 body{
     background-color: black;
+
 }
 .size-b{
     width: 50px;
@@ -33,6 +34,17 @@ body{
 .text-color-p{
     color: var(--text-color-p);
 }
+.btn-dark-blue{
+    color: #193cb8;
+    background-color: #101828;
+}
+.btn-light{
+  color:#1f71c8ff;
+
+    /* color: #1e2939; */
+    background-color: white;
+    
+}
 .bg-gray-900{
 background-color: var(--Primary-color);
 width: 100%;
@@ -46,6 +58,8 @@ position: relative;
 }
 header .logo h2{
     display: inline-block;
+    text-transform: capitalize;
+
 }
 header{
     display: flex;
@@ -63,24 +77,41 @@ margin: 0 15px;
     color: gray;
 }
 .nav-link ul li a:hover{
- color: white; 
+ color:#193cb8; 
+ transition: color .2s ;
 }
  /*  */
  .hero-content{
-    height: 200px;
+    /* height: 200px; */
     /* background-color: aquamarine; */
-    padding-top: 64px;
-    width: 50%;
+    /* padding-top: 64px;
+     */
+     padding: 8rem 0px;
+text-align: center;
+    width: 60%;
     margin: 0 auto;
+ }
+ @media (max-width:768px){
+    .hero-content{
+       max-width:100%;
+    }
  }
  .hero-content h2{
     font-size: 3rem;
+    font-weight: 800;
+    font-size:3rem ;
+    line-height: 3rem;
     color: white;
+    margin-bottom: 1rem;
     text-align: center;
+    text-transform: capitalize;
+
  }
  .hero-content p{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--text-color);
+    line-height: 1.25rem;
+    font-weight: 400;
     /* line-height: 1rem; */
     text-align: center;
  }
@@ -89,21 +120,44 @@ margin: 0 15px;
     margin: 0 auto;
  }
  .hero-content .buttons {
+    padding-top: 40px;
+    padding-bottom: 64px;
    display: flex;
    justify-content: center;
-   gap: 4;
-   margin-top: 20px;
+   /* gap: 10px; */
+   /* margin-top: 20px; */
+
  }
+ 
+ .hero-content .buttons button{
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 1rem ;
+    font-weight:600;
+line-height: 24px;
+cursor: pointer;
+    background-color:#193380    ;
+    border: none;
+    
+ } 
+  .hero-content .buttons button:hover{
+    background-color:#193380d4    ;
+    color: #2A8ffc;
+    transition: .2s;
+    transform: scale(1.25);
+   
+ } 
  .imges{
     height: 10rem;
- }
- .imges img{  
-    width: 666px;
+    border-radius: 10px;
     position: absolute;
-    top: 85%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border:10px solid black;
+}
+ .imges img{  
+     border:10px solid black;
+    width: 666px;
     border-radius: 8px;
     border-bottom: 0    ;
  }
@@ -178,27 +232,140 @@ transform: skewY(-1deg);
     width: 100%;
     height: 150%;
     margin: 2rem 0px;
+    display: flex;
+ gap: 16px;
 }
 .card-pay{
-    width: 50%;
+    width: 100%;
     height: auto;
-    background-color: blueviolet;
-    padding: 25px;
+    background-color: rgb(12, 12, 12);
+    border: 2px solid #193cb8;
+    /* padding: 25px; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
     
 }
-.card-pay span{
-    font-size: 1.5rem;
+.card-pay .icon-agance{
+    color:#193cb8;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+article .cards-pay .card-content{
+    padding: 1.5rem;
+}
+article .center h2{
+font-weight: 800;
+font-size: 2.25rem;
+line-height: 3.25rem;
+    text-transform: capitalize;
+
+}
+article .center h3{
+    line-height: 1.25rem;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #ABCFF4;
+    text-transform: capitalize;
+
+}
+.card-pay .card-price{
+    /* font-size: 1.5rem; */
+    margin: 1.25rem 0px;
 }
 .card-pay-button{
     width: 100%;
-    background-color: rgb(21, 18, 24);
-    margin: 50px auto;}
+    background-color: #101828;
+    /* margin: 0 auto; */
+    text-align: start;
+    padding-left: 1.5rem;
+    /* /* margin: 50px auto; */
+    } 
 
 .card-pay-button button{
     font-size: 1rem;
-    padding: 10px 161px;
+    font-weight: 600;
+     font-family: "Inter", sans-serif;
+    line-height: 1.5rem;
+    padding: 0.90rem 1rem;
     border: 2px solid;
     border-radius: 5rem;
-    margin: 7px 16px;
-    margin-right: 10px;
+    margin: 2rem 0;
+    cursor: pointer;
+    
+
+}   
+.card-pay-button button:hover{
+  color:#2A8ffc;
+  transition: color .2s;
+  transform: scale(1.1);
 }
+    
+
+/*  */
+.section-sorce{
+    background-color: #193380;
+}
+ .section-sorce .parent-card-sorce{
+    /* background-color: #c7c9cd; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ .section-sorce .parent-card-sorce h2{
+font-size: 2.5rem;
+font-weight: 800;
+line-height: 2.25rem;
+margin-bottom: 0.5rem;
+color: white;
+    text-transform: capitalize;
+
+}
+
+ .section-sorce .parent-card-sorce h4{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: #2A8ffc;
+    text-transform: capitalize;
+
+ }
+ .section-sorce .parent-card-sorce .card-sorce{
+    width: 25rem;
+    /* height: 300px; */
+    padding: 8rem 1.25rem;
+    text-align: center;
+ }
+ .section-sorce .parent-card-sorce .card-sorce:nth-of-type(1) ,
+ .section-sorce .parent-card-sorce .card-sorce:nth-of-type(2){
+    border-right: 1px solid rgb(27, 24, 24);
+ }
+ /* footer */
+ footer .footer-link ul li{
+    display: inline-block;
+    margin-right: 1rem;
+ }
+ footer .footer-link ul li:nth-last-of-type{
+    margin-right: 0;
+ }
+ footer .footer-link ul li a{
+text-decoration: none;
+color:  white;
+cursor: pointer;
+ }
+  footer .footer-link ul li a:hover{
+color: #193cb8;
+transition: color .2s;
+ }
+ 
+ footer .footer-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem 2rem;
+ }
+ footer .footer-content .footer-copy {
+    color: #ABCFF4
+    ;
+ }
